@@ -77,7 +77,7 @@ import org.orekit.time.TimeStamped;
 public class MarshallSolarActivityFutureEstimation implements DTM2000InputParameters, DataLoader {
 
     /** Strength level of activity. */
-    public static enum StrengthLevel {
+    public enum StrengthLevel {
 
         /** Strong level of activity. */
         STRONG,
