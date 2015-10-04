@@ -296,7 +296,7 @@ public class EllipsoidTessellator {
      * @return a point inside the zone or null if zone is empty or too thin
      * @exception OrekitException if tile direction cannot be computed
      */
-    private S2Point getInsidePoint(final SphericalPolygonsSet zone)
+    private static S2Point getInsidePoint(final SphericalPolygonsSet zone)
         throws OrekitException {
 
         final InsideFinder finder = new InsideFinder(zone);
@@ -585,7 +585,7 @@ public class EllipsoidTessellator {
      * @param newNodes queue where new node must be put
      * @exception OrekitException if tile direction cannot be computed
      */
-    private void addAllNeighborsIfNeeded(final Mesh.Node base, final Mesh mesh,
+    private static void addAllNeighborsIfNeeded(final Mesh.Node base, final Mesh mesh,
                                          final Collection<Mesh.Node> newNodes)
         throws OrekitException {
         addNode(base.getAlongIndex() - 1, base.getAcrossIndex() - 1, mesh, newNodes);
@@ -605,7 +605,7 @@ public class EllipsoidTessellator {
      * @param newNodes queue where new node must be put
      * @exception OrekitException if tile direction cannot be computed
      */
-    private void addNode(final int alongIndex, final int acrossIndex,
+    private static void addNode(final int alongIndex, final int acrossIndex,
                          final Mesh mesh, final Collection<Mesh.Node> newNodes)
         throws OrekitException {
 

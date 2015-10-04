@@ -173,7 +173,7 @@ public abstract class AbstractForceModelTest {
                              h);
     }
 
-    private double[] integrateShiftedState(final NumericalPropagator propagator,
+    private static double[] integrateShiftedState(final NumericalPropagator propagator,
                                            final SpacecraftState state0,
                                            final AbsoluteDate targetDate,
                                            final int index, final double h)

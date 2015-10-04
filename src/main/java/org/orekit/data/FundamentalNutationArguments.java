@@ -250,7 +250,7 @@ public class FundamentalNutationArguments implements Serializable {
      * @param coefficients polynomial coefficients (ordered from low degrees to high degrees)
      * @return value of the polynomial
      */
-    private double value(final double tc, final double[] coefficients) {
+    private static double value(final double tc, final double[] coefficients) {
         double value = 0;
         for (int i = coefficients.length - 1; i >= 0; --i) {
             value = coefficients[i] + tc * value;
@@ -291,7 +291,7 @@ public class FundamentalNutationArguments implements Serializable {
      * @param coefficients polynomial coefficients (ordered from low degrees to high degrees)
      * @return value of the polynomial
      */
-    private DerivativeStructure value(final DerivativeStructure tc, final double[] coefficients) {
+    private static DerivativeStructure value(final DerivativeStructure tc, final double[] coefficients) {
         DerivativeStructure value = tc.getField().getZero();
         for (int i = coefficients.length - 1; i >= 0; --i) {
             value = value.multiply(tc).add(coefficients[i]);

@@ -163,7 +163,7 @@ public class InterpolationTableLoader implements DataLoader {
      * @param list the list of {@link Double} objects
      * @return the double array containing the list elements
      */
-    private double[] toPrimitiveArray(final List<Double> list) {
+    private static double[] toPrimitiveArray(final List<Double> list) {
         final double[] result = new double[list.size()];
         int idx = 0;
         for (Double element : list) {

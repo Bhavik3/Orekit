@@ -467,7 +467,7 @@ class Mesh {
      * @param acrossIndex index in the across direction
      * @return key map key
      */
-    private long key(final int alongIndex, final int acrossIndex) {
+    private static long key(final int alongIndex, final int acrossIndex) {
         return ((long) alongIndex) << 32 | (((long) acrossIndex) & 0xFFFFl);
     }
 

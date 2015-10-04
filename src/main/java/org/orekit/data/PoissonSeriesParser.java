@@ -735,7 +735,7 @@ public class PoissonSeriesParser<T extends RealFieldElement<T>> {
      * @param cOmega coefficient for mean longitude of the ascending node of the Moon
      * @return computed Doodson number
      */
-    private int delaunayToDoodsonNumber(final int cGamma,
+    private static int delaunayToDoodsonNumber(final int cGamma,
                                         final int cL, final int cLPrime, final int cF,
                                         final int cD, final int cOmega) {
 
@@ -760,7 +760,7 @@ public class PoissonSeriesParser<T extends RealFieldElement<T>> {
      * @param cPs coefficient for longitude of Sun mean perigee
      * @return computed Doodson number
      */
-    private int doodsonToDoodsonNumber(final int cTau,
+    private static int doodsonToDoodsonNumber(final int cTau,
                                        final int cS, final int cH, final int cP,
                                        final int cNprime, final int cPs) {
 

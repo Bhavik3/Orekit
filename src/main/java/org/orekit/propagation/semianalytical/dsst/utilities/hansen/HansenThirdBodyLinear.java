@@ -129,7 +129,7 @@ public class HansenThirdBodyLinear {
      * @param n n value
      * @return the polynomial
      */
-    private PolynomialFunction a(final int n) {
+    private static PolynomialFunction a(final int n) {
         // from recurrence Danielson 2.7.3-(7c), Collins 4-254
         final double r1 = 2 * n + 1;
         final double r2 = n + 1;

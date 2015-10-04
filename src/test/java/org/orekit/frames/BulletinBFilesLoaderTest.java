@@ -113,7 +113,7 @@ public class BulletinBFilesLoaderTest extends AbstractFilesLoaderTest {
         Assert.assertEquals(masToRad((-3 *   0.071  + 27 *   0.066  + 27 *   0.090  - 3 *   0.111)  / 48), history.getNonRotatinOriginNutationCorrection(date)[1],  1.0e-10);
     }
 
-    private double msToS(double ms) {
+    private static double msToS(double ms) {
         return ms / 1000.0;
     }
 

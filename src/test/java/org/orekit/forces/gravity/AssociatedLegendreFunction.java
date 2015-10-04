@@ -86,7 +86,7 @@ class AssociatedLegendreFunction {
 
     }
 
-    private Dfp[] differentiateLegendrePolynomial(Dfp[] p, int m, DfpField dfpField) {
+    private static Dfp[] differentiateLegendrePolynomial(Dfp[] p, int m, DfpField dfpField) {
         Dfp[] dp = new Dfp[p.length - m];
         for (int i = 0; i < dp.length; ++i) {
             dp[i] = p[i + m];

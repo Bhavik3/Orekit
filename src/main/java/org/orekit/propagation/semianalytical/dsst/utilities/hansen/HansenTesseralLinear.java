@@ -202,7 +202,7 @@ public class HansenTesseralLinear {
      * @param mnm1 -n-1
      * @return the polynomial
      */
-    private PolynomialFunction d(final int mnm1) {
+    private static PolynomialFunction d(final int mnm1) {
         // Collins 4-236, Danielson 2.7.3-(9)
         return new PolynomialFunction(new double[] {
             0.0, 0.0, 1.0

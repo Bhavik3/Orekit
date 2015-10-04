@@ -1176,7 +1176,7 @@ public abstract class AbstractGaussianContribution implements DSSTForceModel {
          * @param a Lower bound of the integration interval.
          * @param b Lower bound of the integration interval.
          */
-        private void transform(final double[] points, final double[] weights,
+        private static void transform(final double[] points, final double[] weights,
                 final double a, final double b) {
             // Scaling
             final double scale = (b - a) / 2;
@@ -1196,7 +1196,7 @@ public abstract class AbstractGaussianContribution implements DSSTForceModel {
          * @param weights Nodes weights.
          * @return the integral of the weighted function.
          */
-        private double[] basicIntegrate(final UnivariateVectorFunction f,
+        private static double[] basicIntegrate(final UnivariateVectorFunction f,
                 final double[] points,
                 final double[] weights) {
             double x = points[0];

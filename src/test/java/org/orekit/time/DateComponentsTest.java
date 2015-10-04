@@ -116,7 +116,7 @@ public class DateComponentsTest {
     }
 
     // poor man's (slow) implementation of first calendar week computation, using ISO rules
-    private DateComponents firstWeekMonday(final int year) {
+    private static DateComponents firstWeekMonday(final int year) {
         int i = 0;
         while (true) {
             DateComponents d = new DateComponents(year, 1, ++i);

@@ -382,7 +382,7 @@ class SolidTidesField implements NormalizedSphericalHarmonicsProvider {
      * row ends up at a[p][p-1]
      * @return new triangular array
      */
-    private double[][] buildTriangularArray(final int size, final boolean withDiagonal) {
+    private static double[][] buildTriangularArray(final int size, final boolean withDiagonal) {
         final double[][] array = new double[size][];
         for (int i = 0; i < array.length; ++i) {
             array[i] = new double[withDiagonal ? i + 1 : i];

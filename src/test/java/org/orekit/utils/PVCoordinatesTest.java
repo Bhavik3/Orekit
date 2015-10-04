@@ -343,7 +343,7 @@ public class PVCoordinatesTest {
         return new PVCoordinates(p0, p1, p2);
     }
 
-    private PolynomialFunction randomPolynomial(int degree, Random random) {
+    private static PolynomialFunction randomPolynomial(int degree, Random random) {
         double[] coeff = new double[ 1 + degree];
         for (int j = 0; j < degree; ++j) {
             coeff[j] = random.nextDouble();

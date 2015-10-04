@@ -231,7 +231,7 @@ public class PolynomialParser {
      * @param markers markers to quote
      * @return quoted markers
      */
-    private String[] quote(final String ... markers) {
+    private static String[] quote(final String ... markers) {
         final String[] quoted = new String[markers.length];
         for (int i = 0; i < markers.length; ++i) {
             quoted[i] = "\\Q" + markers[i] + "\\E";
@@ -244,7 +244,7 @@ public class PolynomialParser {
      * @param capturing if true, the group is a capturing group
      * @return group expression
      */
-    private String group(final CharSequence r, final boolean capturing) {
+    private static String group(final CharSequence r, final boolean capturing) {
         return (capturing ? "(" : "(?:") + r + ")";
     }
 
@@ -253,7 +253,7 @@ public class PolynomialParser {
      * @return regular expression recognizing one marker from the list
      * (the result is a non-capturing group)
      */
-    private String either(final CharSequence ... markers) {
+    private static String either(final CharSequence ... markers) {
         final StringBuilder builder = new StringBuilder();
         for (final CharSequence marker : markers) {
             if (builder.length() > 0) {
@@ -269,7 +269,7 @@ public class PolynomialParser {
      * @return regular expression recognizing any number of markers from the list
      * (the result is a capturing group)
      */
-    private String any(final CharSequence ... markers) {
+    private static String any(final CharSequence ... markers) {
         return group(either(markers) + "*", true);
     }
 
@@ -278,7 +278,7 @@ public class PolynomialParser {
      * @param capturing if true, wrap the optional part in a capturing group
      * @return group expression
      */
-    private String zeroOrOne(final CharSequence r, final boolean capturing) {
+    private static String zeroOrOne(final CharSequence r, final boolean capturing) {
         final String optional = group(r, false) + "?";
         return capturing ? group(optional, true) : optional;
     }
@@ -290,7 +290,7 @@ public class PolynomialParser {
      * @return index of the start marker, or negative if string does not start
      * with one of the markers
      */
-    private int startMarker(final String s, final int offset, final String[] markers) {
+    private static int startMarker(final String s, final int offset, final String[] markers) {
         for (int i = 0; i < markers.length; ++i) {
             if (s.startsWith(markers[i], offset)) {
                 return i;
