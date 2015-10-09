@@ -183,7 +183,7 @@ public class HolmesFeatherstoneAttractionModelTest extends AbstractForceModelTes
 
     }
 
-    private Dfp error(Dfp refValue, double value) {
+    private static Dfp error(Dfp refValue, double value) {
         return refValue.getField().newDfp(value).subtract(refValue);
     }
 
@@ -618,7 +618,7 @@ public class HolmesFeatherstoneAttractionModelTest extends AbstractForceModelTes
 
     }
 
-    private double accelerationRelativeError(ForceModel testModel, ForceModel referenceModel,
+    private static double accelerationRelativeError(ForceModel testModel, ForceModel referenceModel,
                                              SpacecraftState state)
         throws OrekitException {
 

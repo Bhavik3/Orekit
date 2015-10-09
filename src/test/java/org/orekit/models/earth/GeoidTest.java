@@ -113,7 +113,7 @@ public class GeoidTest {
      *
      * @return a new {@link Geoid}
      */
-    private Geoid getComponent() {
+    private static Geoid getComponent() {
         return new Geoid(potential, WGS84);
     }
 

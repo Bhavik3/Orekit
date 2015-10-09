@@ -213,7 +213,7 @@ public class Jacobianizer {
      * @param h shift step
      * @return shifted vector
      */
-    private Vector3D shift(final FieldVector3D<DerivativeStructure> nominal, final int index, final double h) {
+    private static Vector3D shift(final FieldVector3D<DerivativeStructure> nominal, final int index, final double h) {
         final double[] delta = new double[nominal.getX().getFreeParameters()];
         delta[index] = h;
         return new Vector3D(nominal.getX().taylor(delta),
@@ -227,7 +227,7 @@ public class Jacobianizer {
      * @param h shift step
      * @return shifted rotation
      */
-    private Rotation shift(final FieldRotation<DerivativeStructure> nominal, final int index, final double h) {
+    private static Rotation shift(final FieldRotation<DerivativeStructure> nominal, final int index, final double h) {
         final double[] delta = new double[nominal.getQ0().getFreeParameters()];
         delta[index] = h;
         return new Rotation(nominal.getQ0().taylor(delta),
@@ -243,7 +243,7 @@ public class Jacobianizer {
      * @param h shift step
      * @return shifted scalar
      */
-    private double shift(final DerivativeStructure nominal, final int index, final double h) {
+    private static double shift(final DerivativeStructure nominal, final int index, final double h) {
         final double[] delta = new double[nominal.getFreeParameters()];
         delta[index] = h;
         return nominal.taylor(delta);

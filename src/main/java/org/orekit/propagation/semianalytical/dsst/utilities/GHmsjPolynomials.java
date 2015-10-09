@@ -272,7 +272,7 @@ public class GHmsjPolynomials {
      *  @param i number on which evaluation is done
      *  @return -1 or +1 depending on sign of i
      */
-    private int sgn(final int i) {
+    private static int sgn(final int i) {
         return (i < 0) ? -1 : 1;
     }
 }

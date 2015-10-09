@@ -942,7 +942,7 @@ public class TransformTest {
                                            new Vector3D(omega, Vector3D.PLUS_K)));
     }
 
-    private double derivative(double h,
+    private static double derivative(double h,
                               double ym4h, double ym3h, double ym2h, double ym1h,
                               double yp1h, double yp2h, double yp3h, double yp4h) {
         return (-3 * (yp4h - ym4h) + 32 * (yp3h - ym3h) - 168 * (yp2h - ym2h) + 672 * (yp1h - ym1h)) /
@@ -961,7 +961,7 @@ public class TransformTest {
         return combined;
     }
 
-    private Vector3D randomVector(double scale, RandomGenerator random) {
+    private static Vector3D randomVector(double scale, RandomGenerator random) {
         return new Vector3D(random.nextDouble() * scale,
                             random.nextDouble() * scale,
                             random.nextDouble() * scale);

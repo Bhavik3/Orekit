@@ -168,7 +168,7 @@ public class CelestialBodyFactoryTest {
         }
     }
 
-    private double bodyDistance(CelestialBody body1, CelestialBody body2, AbsoluteDate date, Frame frame)
+    private static double bodyDistance(CelestialBody body1, CelestialBody body2, AbsoluteDate date, Frame frame)
         throws OrekitException {
         Vector3D body1Position = body1.getPVCoordinates(date, frame).getPosition();
         Vector3D body2Position = body2.getPVCoordinates(date, frame).getPosition();

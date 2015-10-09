@@ -130,7 +130,7 @@ public class GeoMagneticModelLoader implements DataLoader {
      * @return magnetic field
      * @throws IOException if some read error occurs
      */
-    private GeoMagneticField readCombinedFormat(final StreamTokenizer stream)
+    private static GeoMagneticField readCombinedFormat(final StreamTokenizer stream)
         throws IOException {
         final String modelName = stream.sval;
         stream.nextToken();

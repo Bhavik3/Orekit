@@ -617,7 +617,7 @@ public class JPLEphemeridesLoader implements CelestialBodyLoader {
      * @return true if record has been filled up
      * @exception IOException if a read error occurs
      */
-    private boolean readInRecord(final InputStream input, final byte[] record, final int start)
+    private static boolean readInRecord(final InputStream input, final byte[] record, final int start)
         throws IOException {
         int index = start;
         while (index != record.length) {

@@ -249,7 +249,7 @@ public class UTCScale implements TimeScale {
      * </p>
      * @return data transfer object that will be serialized
      */
-    private Object writeReplace() {
+    private static Object writeReplace() {
         return new DataTransferObject();
     }
 

@@ -612,7 +612,7 @@ class ZonalContribution implements DSSTForceModel {
      * @param upperBound the upper bound of the interval
      * @return true if the index is between the lower and upper bounds, false otherwise
      */
-    private boolean isBetween(final int index, final int lowerBound, final int upperBound) {
+    private static boolean isBetween(final int index, final int lowerBound, final int upperBound) {
         return index >= lowerBound && index <= upperBound;
     }
 

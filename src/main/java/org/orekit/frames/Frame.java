@@ -395,7 +395,7 @@ public class Frame implements Serializable {
         /** Replace the deserialized data transfer object with a {@link FactoryManagedFrame}.
          * @return replacement {@link FactoryManagedFrame}
          */
-        private Object readResolve() {
+        private static Object readResolve() {
             return getRoot();
         }
 

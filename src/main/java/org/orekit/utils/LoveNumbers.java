@@ -51,7 +51,7 @@ public class LoveNumbers implements Serializable {
      * @param source source array
      * @return copied array
      */
-    private double[][] copyIrregular(final double[][] source) {
+    private static double[][] copyIrregular(final double[][] source) {
         final double[][] copy = new double[source.length][];
         for (int i = 0; i < source.length; ++i) {
             copy[i] = source[i].clone();
