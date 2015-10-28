@@ -66,7 +66,7 @@ class OceanTidesField implements NormalizedSphericalHarmonicsProvider {
     private final FundamentalNutationArguments arguments;
 
     /** Function computing pole tide terms (ΔC₂₁, ΔS₂₁). */
-    private final TimeFunction<double []> poleTideFunction;
+    private final TimeFunction<double[]> poleTideFunction;
 
     /** Simple constructor.
      * @param ae central body reference radius
@@ -80,7 +80,7 @@ class OceanTidesField implements NormalizedSphericalHarmonicsProvider {
     OceanTidesField(final double ae, final double mu,
                            final List<OceanTidesWave> waves,
                            final FundamentalNutationArguments arguments,
-                           final TimeFunction<double []> poleTideFunction)
+                           final TimeFunction<double[]> poleTideFunction)
         throws OrekitException {
 
         // store mode parameters

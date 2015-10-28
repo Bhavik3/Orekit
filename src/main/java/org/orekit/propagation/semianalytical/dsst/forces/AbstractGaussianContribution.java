@@ -542,7 +542,7 @@ public abstract class AbstractGaussianContribution implements DSSTForceModel {
                     val[i] = roa2 * deriv[i];
                 }
             } else {
-                val = new double [12];
+                val = new double[12];
                 //Compute cos(j*L) and sin(j*L);
                 final double cosjL = j == 1 ? cosL : FastMath.cos(j * x);
                 final double sinjL = j == 1 ? sinL : FastMath.sin(j * x);
