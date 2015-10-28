@@ -366,9 +366,7 @@ class TesseralContribution implements DSSTForceModel {
      */
     private void createHansenObjects(final boolean meanOnly) {
         //Allocate the two dimensional array
-        final int rows     = 2 * maxDegree + 1;
-        final int columns  = jMax + 1;
-        this.hansenObjects = new HansenTesseralLinear[rows][columns];
+        this.hansenObjects = new HansenTesseralLinear[2 * maxDegree + 1][jMax + 1];
 
         if (meanOnly) {
             // loop through the resonant orders
@@ -986,12 +984,10 @@ class TesseralContribution implements DSSTForceModel {
          */
         FourierCjSjCoefficients(final int jMax, final int mMax) {
             // initialise fields
-            final int rows    = mMax + 1;
-            final int columns = 2 * jMax + 1;
-            this.jMax         = jMax;
-            this.cCoef        = new double[rows][columns][6];
-            this.sCoef        = new double[rows][columns][6];
-            this.roaPow       = new double[maxDegree + 1];
+            this.jMax = jMax;
+            this.cCoef = new double[mMax + 1][2 * jMax + 1][6];
+            this.sCoef = new double[mMax + 1][2 * jMax + 1][6];
+            this.roaPow = new double[maxDegree + 1];
             roaPow[0] = 1.;
         }
 
@@ -1238,12 +1234,10 @@ class TesseralContribution implements DSSTForceModel {
         TesseralShortPeriodicCoefficients(final int jMax, final int mMax, final int interpolationPoints) {
 
             // Initialize fields
-            final int rows    = mMax + 1;
-            final int columns = 2 * jMax + 1;
             this.jMax = jMax;
             this.mMax = mMax;
-            this.cijm = new ShortPeriodicsInterpolatedCoefficient[rows][columns][6];
-            this.sijm = new ShortPeriodicsInterpolatedCoefficient[rows][columns][6];
+            this.cijm = new ShortPeriodicsInterpolatedCoefficient[mMax + 1][2 * jMax + 1][6];
+            this.sijm = new ShortPeriodicsInterpolatedCoefficient[mMax + 1][2 * jMax + 1][6];
             this.cjsjFourier = new FourierCjSjCoefficients(jMax, mMax);
 
             for (int m = 1; m <= mMax; m++) {
