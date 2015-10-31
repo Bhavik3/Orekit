@@ -154,9 +154,8 @@ class OceanTidesField implements NormalizedSphericalHarmonicsProvider {
     public NormalizedSphericalHarmonics onDate(final AbsoluteDate date) throws OrekitException {
 
         // computed Cnm and Snm coefficients
-        final int        rows = degree + 1;
-        final double[][] cnm  = new double[rows][];
-        final double[][] snm  = new double[rows][];
+        final double[][] cnm = new double[degree + 1][];
+        final double[][] snm = new double[degree + 1][];
         for (int i = 0; i <= degree; ++i) {
             final int m = FastMath.min(i, order) + 1;
             cnm[i] = new double[m];

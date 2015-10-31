@@ -236,8 +236,7 @@ abstract class SeriesTerm<T extends RealFieldElement<T>> {
         if (array.length > index) {
             extended = array;
         } else {
-            final int rows =  index + 1;
-            extended = new double[rows][];
+            extended = new double[index + 1][];
             System.arraycopy(array, 0, extended, 0, array.length);
             Arrays.fill(extended, array.length, index + 1, new double[0]);
         }

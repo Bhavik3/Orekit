@@ -728,9 +728,8 @@ class ZonalContribution implements DSSTForceModel {
 
             this.di = new ShortPeriodicsInterpolatedCoefficient[6];
 
-            final int rows = jMax + 1;
-            this.cij = new ShortPeriodicsInterpolatedCoefficient[rows][6];
-            this.sij = new ShortPeriodicsInterpolatedCoefficient[rows][6];
+            this.cij = new ShortPeriodicsInterpolatedCoefficient[jMax + 1][6];
+            this.sij = new ShortPeriodicsInterpolatedCoefficient[jMax + 1][6];
 
             this.rhoj = new double[jMax + 1];
             this.sigmaj  = new double[jMax + 1];

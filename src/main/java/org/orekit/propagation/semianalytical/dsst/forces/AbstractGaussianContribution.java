@@ -1273,9 +1273,8 @@ public abstract class AbstractGaussianContribution implements DSSTForceModel {
             this.jMax = jMax;
 
             //Allocate the arrays
-            final int rows = jMax + 1;
-            cCoef = new double[rows][6];
-            sCoef = new double[rows][6];
+            cCoef = new double[jMax + 1][6];
+            sCoef = new double[jMax + 1][6];
 
             //Compute the coefficients
             computeCoefficients(state);
@@ -1405,9 +1404,8 @@ public abstract class AbstractGaussianContribution implements DSSTForceModel {
 
             this.dij = new ShortPeriodicsInterpolatedCoefficient[3][6];
 
-            final int rows = jMax + 1;
-            this.cij = new ShortPeriodicsInterpolatedCoefficient[rows][6];
-            this.sij = new ShortPeriodicsInterpolatedCoefficient[rows][6];
+            this.cij = new ShortPeriodicsInterpolatedCoefficient[jMax + 1][6];
+            this.sij = new ShortPeriodicsInterpolatedCoefficient[jMax + 1][6];
 
             this.currentRhoSigmaj = new double[2][3 * jMax + 1];
 
