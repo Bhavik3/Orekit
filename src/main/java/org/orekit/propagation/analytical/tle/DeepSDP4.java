@@ -377,7 +377,7 @@ class DeepSDP4 extends SDP4 {
             final double g322;
             final double g410;
             final double g422;
-            double g520;
+            final double g520;
 
             resonant = true;       // it is resonant...
             synchronous = false;     // but it's not synchronous
